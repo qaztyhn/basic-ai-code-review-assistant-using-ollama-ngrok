@@ -13,7 +13,28 @@ An intelligent C++ application that automates code reviews using local AI models
 * **Build Tools:** CMake 3.10+, Visual Studio / MinGW
 * **Dependencies:** * libcurl (for Network Requests)
     * Ollama (Local AI Server)
+    * Ngrok (For tunneling)
 
+## 🌐 Server Setup (Kaggle Backend)
+Since the AI model (`gpt-oss:20b`) requires high computational resources, we use **Kaggle** as the backend server.
+
+1.  **Open the Kaggle Notebook:**
+    Click here to access the host notebook: **https://www.kaggle.com/code/lnchau/ollama-ngok**
+
+2.  **Configure Ngrok:**
+    * In the notebook, go to Add-ons.
+    * Enter your **Ngrok Authtoken** (Get it from [dashboard.ngrok.com](https://dashboard.ngrok.com)).
+
+3.  **Start the Server:**
+    * Run **"Run All"** in the notebook.
+    * Wait for the system to download the model and start Ollama.
+    * Look for the output log showing the public URL:
+        > `Ngrok Tunnel: https://xxxx-xxxx.ngrok-free.app`
+
+4.  **Connect the App:**
+    * Copy that `https://...` URL.
+    * Open the C++ Application (`reviewer.exe`).
+    * Paste the URL when prompted (or update the configuration).
 ## 📦 Installation & Build
 This project uses **Vcpkg** for dependency management.
 
