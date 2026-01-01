@@ -35,16 +35,35 @@ Since the AI model (`gpt-oss:20b`) requires high computational resources, we use
     * Copy that `https://...` URL.
     * Open the C++ Application (`reviewer.exe`).
     * Paste the URL when prompted (or update the configuration).
-## 📦 Installation & Build
-This project uses **Vcpkg** for dependency management.
 
+## 🛠 Prerequisites
+Before building the project, you need to have **Vcpkg** installed on your machine.
+If you haven't installed it yet, follow these steps:
+1.  Open Terminal (CMD or PowerShell).
+2.  Clone Vcpkg repository:
+    ```bash
+    git clone [https://github.com/microsoft/vcpkg.git](https://github.com/microsoft/vcpkg.git)
+    ```
+3.  Run the bootstrap script:
+    ```bash
+    cd vcpkg
+    .\bootstrap-vcpkg.bat
+    ```
+4.  **Note the path** where you installed it (e.g., `C:\vcpkg` or `D:\vcpkg`). You will need it for the build command.
+
+## 📦 Installation & Build
 ```bash
 # 1. Clone the repository
 git clone [https://github.com/qaztyhn/basic-ai-code-review-assistance-using-ollama-ngrok.git](https://github.com/qaztyhn/basic-ai-code-review-assistance-using-ollama-ngrok.git)
 cd basic-ai-code-review-assistance-using-ollama-ngrok
 
-# 2. Configure CMake with Vcpkg toolchain
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE="[Path_to_Your_Vcpkg]/scripts/buildsystems/vcpkg.cmake"
+# 2. Configure CMake
+# IMPORTANT: Replace [Path_to_Vcpkg] with your actual Vcpkg installation path.
+# Example: -DCMAKE_TOOLCHAIN_FILE="C:/vcpkg/scripts/buildsystems/vcpkg.cmake"
+
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE="[Path_to_Vcpkg]/scripts/buildsystems/vcpkg.cmake"
 
 # 3. Build (Release Mode)
 cmake --build build --config Release
+
+
