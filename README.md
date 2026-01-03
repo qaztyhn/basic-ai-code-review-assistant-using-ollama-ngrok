@@ -2,20 +2,20 @@
 
 An intelligent C++ application that automates code reviews using local AI models (Ollama/GPT). It supports interactive chat to explain code logic, detect bugs, and suggest improvements.
 
-## 🚀 Key Features
+## Key Features
 * **AI Powered:** Utilizes the `gpt-oss:20b` model to analyze code for bugs, security issues, and clean code standards.
 * **Smart Drag & Drop:** Easily drag and drop source files into the console window (Supports both CMD & PowerShell paths).
 * **Interactive Chat:** Ask follow-up questions about the code analysis in a conversational interface.
 * **Auto Report:** Automatically generates a `.txt` review report and opens it for immediate viewing.
 
-## 🛠 System Requirements
+## System Requirements
 * **OS:** Windows 10/11
 * **Build Tools:** CMake 3.10+, Visual Studio / MinGW
 * **Dependencies:** * libcurl (for Network Requests)
     * Ollama (Local AI Server)
     * Ngrok (For tunneling)
 
-## 🌐 Server Setup (Kaggle Backend)
+## Server Setup (Kaggle Backend)
 Since the AI model (`gpt-oss:20b`) requires high computational resources, we use **Kaggle** as the backend server.
 
 1.  **Open the Kaggle Notebook:**
@@ -36,7 +36,7 @@ Since the AI model (`gpt-oss:20b`) requires high computational resources, we use
     * Open the C++ Application (`reviewer.exe`).
     * Paste the URL when prompted (or update the configuration).
 
-## 🛠 Prerequisites
+## Prerequisites
 Before building the project, you need to have **Vcpkg** installed on your machine.
 If you haven't installed it yet, follow these steps:
 1.  Open Terminal (CMD or PowerShell).
@@ -51,7 +51,7 @@ If you haven't installed it yet, follow these steps:
     ```
 4.  **Note the path** where you installed it (e.g., `C:\vcpkg` or `D:\vcpkg`). You will need it for the build command.
 
-## 📦 Installation & Build
+## Installation & Build
 ```bash
 # 1. Clone the repository
 git clone [https://github.com/qaztyhn/basic-ai-code-review-assistance-using-ollama-ngrok.git](https://github.com/qaztyhn/basic-ai-code-review-assistance-using-ollama-ngrok.git)
